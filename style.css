@@ -1,0 +1,108 @@
+:root {
+    font-size: 16px;
+
+    --color1: #4969EE;
+    --color2: #0089E3;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /* background: linear-gradient(135deg, var(--color1), var(--color2)); */
+    background: url(https://i.imgur.com/pBNW5nd.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    margin: 1rem;
+    padding: 2rem;
+    max-width: 32rem;
+    flex-basis: 100%;
+    flex-grow: 0;
+    background: #ffffff37;
+    backdrop-filter: blur(3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 4rem #00000073;
+    border: #ffffff37 0.125rem solid;
+    font-family: montserrat;
+}
+
+@media (max-height: 737px) {
+    body {
+        display: block;
+        height: max-content;
+    }
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile img {
+    width: 6rem;
+    border-radius: 50%;
+}
+
+.profile span {
+    font-size: 1.25rem;
+}
+
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.links a {
+    all: unset;
+    display: flex;
+    padding: 0.25rem;
+    background: #ffffff37;
+    box-shadow: 0 0 4rem #00000037;
+    border-radius: 1.2rem;
+    transition: all 250ms ease;
+}
+
+.links a:hover {
+    box-shadow:
+        0 0 4rem #00000037,
+        inset 0 0 0 0.125rem #ffffff37;
+}
+
+.links a span {
+    font-size: 1rem;
+    flex-grow: 1;
+    padding: 1rem;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1rem;
+}
